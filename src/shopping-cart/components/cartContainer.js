@@ -27,7 +27,7 @@ export const CartContainer = ({cart}) => {
                     <div className="col-sm-2">
                         <div className="card card-body">
                             <p className="mb-1">Total Items</p>
-                            <h4 className=" mb-3 txt-right">{cart.length}</h4>
+                            <h4 className=" mb-3 txt-right">{cart.map(e=>e.quantity,).reduce((a, b) => a + b)}</h4>
                             <p className="mb-1">Total Payment</p>
                             <h3 className="m-0 txt-right">{cart.map(e=>e.price*e.quantity,).reduce((a, b) => a + b)}</h3>
                             <hr className="my-4" />
