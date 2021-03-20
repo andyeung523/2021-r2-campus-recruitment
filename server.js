@@ -80,7 +80,7 @@ app.post('/cart', function (req, res) {
       res.status(400).json({ "error": err.message });
       return;
     }
-    db.all(`SELECT p.id,p.name,p.price FROM cart_item ct INNER JOIN product p on ct.product_id = p.id`, (err, rows) => {
+    db.all(`SELECT p.id,count(p.id) as quantity,p.name,p.price FROM cart_item ct INNER JOIN product p on ct.product_id = p.id group by p.id`, (err, rows) => {
       res.status(201).json({ "data": rows });
     })
 
@@ -90,10 +90,11 @@ app.post('/cart', function (req, res) {
 
 // Get cart's product
 app.get('/cart', function (req, res) {
-  db.all(`SELECT p.id,p.name,p.price FROM cart_item ct INNER JOIN product p on ct.product_id = p.id`, (err, rows) => {
-
+  //SELECT p.id, count(p.id) as quantity,p.name,p.price FROM cart_item ct INNER JOIN product p on ct.product_id = p.id group by p.id
+  db.all(`SELECT p.id,count(p.id) as quantity,p.name,p.price FROM cart_item ct INNER JOIN product p on ct.product_id = p.id group by p.id`, (err, rows) => {
+    //console.log('hre');
     const result = deduplicate(rows);
-
+    
     if (err) {
       res.status(400).json({ "error": err.message });
       return;

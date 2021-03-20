@@ -29,7 +29,7 @@ export const CartContainer = ({cart}) => {
                             <p className="mb-1">Total Items</p>
                             <h4 className=" mb-3 txt-right">{cart.length}</h4>
                             <p className="mb-1">Total Payment</p>
-                            <h3 className="m-0 txt-right">{cart.map(e=>e.price).reduce((a, b) => a + b)}</h3>
+                            <h3 className="m-0 txt-right">{cart.map(e=>e.price*e.quantity,).reduce((a, b) => a + b)}</h3>
                             <hr className="my-4" />
                             <div className="text-center">
                                 <button type="button" className="btn btn-primary mb-2 btn-dark" >CHECKOUT</button>
