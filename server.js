@@ -22,7 +22,7 @@ app.get('/', function (req, res) {
 
 // Get product info API
 app.get('/product', function (req, res) {
-  db.all("SELECT * FROM product", (err, rows) => {
+  db.all("select * from product where isObsoleted=0", (err, rows) => {
     if (err) {
       res.status(400).json({ "error": err.message });
       return;
