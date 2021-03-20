@@ -54,7 +54,7 @@ export const Store = ({ page, notFound }) => {
                 {/* Question 1. change the shop name */}
                 <div className="text-center mt-4">
                     <h1 className="display-3">
-                        IBM Shop
+                    International Online Mall
                     </h1>
                     <p className="mt-3">This is a online shopping website.</p>
                 </div>
