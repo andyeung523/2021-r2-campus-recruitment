@@ -1,0 +1,43 @@
+.grid {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+.card {
+    margin: 1rem;
+    flex-basis: 45%;
+    max-width: 30rem;
+    padding: 1.5rem;
+    text-align: left;
+    color: inherit;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+
+.grid-item {
+    display: grid;
+    grid-gap: 15px;
+}
+
+.add-to-cart-icon {
+  width: 18px;
+  display: inline-block;
+}
+
+.product-img {
+  vertical-align:middle;
+  height: 20rem;
+  width: 20rem;
+}
+
+.align-grid {
+  margin-left: 20%;
+  margin-right: 10%;
+}
+
+.inline-block{
+  display: inline-block;
+}

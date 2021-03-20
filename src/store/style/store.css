@@ -1,0 +1,21 @@
+.Store {
+  text-align: center;
+}
+
+.header {
+  min-height: 5vh;
+  font-size: calc(5px + 1.5vmin);
+  padding: 5px 10px;
+  text-align: center;
+  margin-top: 5vh;
+}
+
+.header-child {
+  margin-right: 28px;
+  color: black;
+  font-weight: 350;
+}
+
+.header-icon {
+  width: 18px;
+}

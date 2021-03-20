@@ -1,0 +1,9 @@
+.cart-product-img {
+    height: 5rem;
+    width: 5rem;
+  }
+
+  .checkout-box{
+    position: absolute;
+    right: 10%;
+  }
